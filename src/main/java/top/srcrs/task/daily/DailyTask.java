@@ -26,6 +26,7 @@ public class DailyTask implements Task {
     public void run() {
         try {
             JSONObject reward = getReward();
+            log.info(reward.toJSONString());
             /* 今天是否完成分享视频任务 */
             boolean isShare = reward.getBoolean("share");
             /* 今天是否完成观看视频任务 */
