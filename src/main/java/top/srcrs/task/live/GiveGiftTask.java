@@ -35,6 +35,9 @@ public class GiveGiftTask implements Task {
             long nowTime = System.currentTimeMillis()/1000;
             /* 获得礼物列表 */
             JSONArray jsonArray = xliveGiftBagList();
+            if (jsonArray == null) {
+                return;
+            }
             /* 判断是否有过期礼物出现 */
             boolean flag = true;
             for(Object object : jsonArray){
