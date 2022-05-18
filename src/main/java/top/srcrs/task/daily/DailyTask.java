@@ -2,6 +2,7 @@ package top.srcrs.task.daily;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import top.srcrs.Task;
 import top.srcrs.domain.UserData;
