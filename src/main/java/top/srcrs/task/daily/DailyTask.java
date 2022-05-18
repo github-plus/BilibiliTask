@@ -2,6 +2,7 @@ package top.srcrs.task.daily;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import top.srcrs.Task;
 import top.srcrs.domain.UserData;
@@ -26,7 +27,7 @@ public class DailyTask implements Task {
     public void run() {
         try {
             JSONObject reward = getReward();
-            log.info(reward.toJSONString());
+            log.info(JSON.toJSONString(reward));
             /* 今天是否完成分享视频任务 */
             boolean isShare = reward.getBoolean("share");
             /* 今天是否完成观看视频任务 */
