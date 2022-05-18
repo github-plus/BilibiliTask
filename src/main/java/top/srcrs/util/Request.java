@@ -92,7 +92,7 @@ public class Request {
     private static RequestBuilder getBaseBuilder(final String method) {
         return RequestBuilder.create(method)
                              .addHeader("connection", "keep-alive")
-                             .addHeader("referer", "https://www.bilibili.com/")
+                             .addHeader("referer", "https://account.bilibili.com")
                              .addHeader("User-Agent", UserAgent)
                              .addHeader("Cookie", USER_DATA.getCookie());
     }
